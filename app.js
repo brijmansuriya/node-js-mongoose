@@ -4,12 +4,12 @@ const app = express()
 
 const UserRoutes = require('./routes/auth.routes')
 
-// app.get('/', (req, res) => {
-//     res.quary
-// })
+app.get('/', (req, res) => {
+    res.send('ok')
+})
 
 app.use(express.json())
 console.log(':::::app.js');
-app.use('/auth',UserRoutes)
+app.use('/api/auth',UserRoutes)
 
 module.exports = app
